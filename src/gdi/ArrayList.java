@@ -3,8 +3,8 @@ package gdi;
 public class ArrayList {
     int[] list;
 
-    void add(final int value) {
-        final int[] newList = new int[this.list.length + 1];
+    void add(int value) {
+        int[] newList = new int[this.list.length + 1];
         for(int i=0; i < this.list.length; i++) {
             newList[i] = this.list[i];
         }
@@ -12,7 +12,7 @@ public class ArrayList {
         this.list=newList;
     }
 
-    boolean contains(final int value) {
+    boolean contains(int value) {
         for(int i=0; i < this.list.length; i++) {
             if(this.list[i] == value) {
                 return true;
@@ -25,9 +25,9 @@ public class ArrayList {
         return this.list.length ==0;
     }
 
-    void remove(final int value) {
+    void remove(int value) {
         if(this.contains(value)) {
-        final int[] minusList = new int[this.list.length - 1];
+        int[] minusList = new int[this.list.length - 1];
         boolean found = false;
         for(int i=0; i < this.list.length; i++) {
             if (value == this.list[i]) {
