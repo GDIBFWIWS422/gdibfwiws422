@@ -26,7 +26,7 @@ public class ArrayList {
     }
 
     void remove(int value) {
-        if(this.contains(value)) {
+        if(contains(value)) {
         int[] minusList = new int[this.list.length - 1];
         boolean found = false;
         for(int i=0; i < this.list.length; i++) {

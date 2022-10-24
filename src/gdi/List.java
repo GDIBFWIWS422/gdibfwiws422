@@ -17,11 +17,11 @@ public class List {
     }
 
     boolean contains(int v) {
-
+        return false;
     }
 
     boolean isEmpty() {
-
+        return false;
     }
 
     void remove(int v) {
