@@ -60,6 +60,38 @@ public class Sorting {
         int middle= (from + to)/2;
         mergesort2(array, from, middle);
         mergesort2(array, middle +1, to);
+        merge(array,from,middle+1,to);
+    }
+
+    void merge(int[] array, int fromleft, int fromright, int to) {
+        int left=fromleft;
+        int right=fromright;
+        int [] copy=new int [array.length];
+        int index=fromleft;
+        while (left<fromright && right<=to) {
+            if(array[left]<array[right])
+            {
+               copy[index]=array[left];
+               left++;
+            } else {
+                copy[index]=array[right];
+                right++;
+            }
+            index++;
+        }
+        while (left<fromright) {
+            copy[index]=array[left];
+            left++;
+            index++;
+        }
+        while (right<=to) {
+            copy[index]=array[right];
+            right++;
+            index++;
+        }
+        for(int i=fromleft;i<=to;i++) {
+            array[i]=copy[i];
+        }
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package gdibfwiws422.src.gdi;
+package gdi;
 
 public class einfVerketteteList {
     class ListElement {
